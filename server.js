@@ -2,6 +2,7 @@ const express = require('express')
   hbs = require('hbs')
   util = require('util')
   fs = require('fs')
+  port = process.env.PORT || 3000
 // const lodash = require('lodas')
 
 var app = express()
@@ -131,6 +132,6 @@ app.get('/bad', (req, res) => {
 // })
 
 // bind app to local port
-app.listen(3000, () => {
-  console.log('Server is up on port 3000.')
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`)
 })
